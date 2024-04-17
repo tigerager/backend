@@ -9,6 +9,7 @@ const path = require('path');
 router.get('/', async (req, res)=>{
     const getAllProduk = await Produk.findAll();
     res.json(getAllProduk);
+    
 });
 
 const storage = multer.diskStorage({
