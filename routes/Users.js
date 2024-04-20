@@ -34,8 +34,7 @@ Router.post('/login',  async (req, res) => {
         }
         else{
             const accessToken = sign({username: user.username, id: user.id}, "tokenrahasia");
-            req.session.accessToken = accessToken;
-            res.send({token: req.session.accessToken, id: user.id});
+            res.send({token: accessToken, id: user.id});
         }
     });
 }
