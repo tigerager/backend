@@ -53,6 +53,7 @@ Router.get('/setTokenhttponly/:id', async (req, res)=>{
         'accessToken', accessToken, {
         httpOnly: true,
         maxAge: 60000,
+        expires: 60000
     }
     ).send()
    
